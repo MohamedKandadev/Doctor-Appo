@@ -1,0 +1,38 @@
+@import '../../assets/Styles/';
+
+.specialities-nav{
+  margin: auto;
+  list-style: none;
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+  font-family: $font--primary;
+  margin: 0;
+  padding: 0;
+  li{
+    background-color: #fff;
+    border: 2px solid rgba(86,90,207,.2);
+    border-radius: 8px!important;
+    // color: #565acf;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    min-width: fit-content;
+    padding: 12px 15px;
+    transition: all .5s;
+    color: $color--primary;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &:not(:last-of-type){
+      margin-right: 10px;
+    }
+    &:hover, &.active{
+      background-color: $color--primary;
+      color: #fff;
+    }
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+}

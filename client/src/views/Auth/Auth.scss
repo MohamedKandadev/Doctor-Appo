@@ -1,0 +1,15 @@
+@import '../../assets/Styles/';
+
+.authContent{
+  &__card{
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: $shadow--primary;
+    border-radius: 40px;
+
+    height: 600px;
+  }
+}

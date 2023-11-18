@@ -1,0 +1,205 @@
+@import '../../assets/Styles/';
+
+.aboutusContent{
+  padding-top: 50px;
+  // height: fit-content;
+  position: relative;
+  &__imgs{
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+      li{
+        width: 55%;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        @include breakpoint(med, max){
+          padding: 0 5px;
+        }
+        &:first-of-type,
+        &:nth-of-type(3){
+          width: 45% !important;
+          text-align: end;
+        }
+        &:first-of-type{
+          img{
+            border-radius: 0 60px 60px;
+            margin-top: 67px;
+          }
+        }
+        &:nth-of-type(2){
+          img{
+            border-radius: 60px 0 60px 60px;
+          }
+        }
+        &:nth-of-type(3){
+          img{
+            border-radius: 60px 60px 60px 0;
+          }
+        }
+        img{
+          @include breakpoint(custom, max, 1410){
+            width: 100%;
+          }
+        }
+        &:nth-of-type(4){
+          .box{
+            background-color: #e6e7ff;
+            border-radius: 60px 60px 0 60px;
+            color: #565acf;
+            display: block;
+            font-size: 120px;
+            font-weight: 800;
+            line-height: 75px;
+            padding: 60px 0 30px;
+            position: relative;
+            text-align: center;
+            width: 220px;
+            font-family: $font--primary;
+            z-index: 2;
+            span{
+              color: #1f2278;
+              display: block;
+              font-size: 18px;
+            }
+            &::after{
+              border: 2px solid #565acf;
+              border-radius: 60px 60px 0 60px;
+              content: "";
+              height: 100%;
+              left: 10px;
+              position: absolute;
+              top: 10px;
+              width: 100%;
+              z-index: -1;
+            }
+          }
+        }
+      }
+      &::after{
+        background-color: #f17732;
+        border-radius: 15px;
+        content: "";
+        height: 50px;
+        left: 50%;
+        position: absolute;
+        top: 49%;
+        transform: rotate(45deg) translate(-50%, 65%);
+        width: 50px;
+      }
+    }
+  }
+  .heading-box{
+    font-family: $font--primary;
+    padding: 40px 30px;
+    h6{
+      background-image: url('../../assets/images/bannerTitle-background.png');
+      background-position: 50%;
+      background-repeat: repeat;
+      display: inline-block;
+      font-weight: 700;
+      margin-bottom: 15px;
+      padding: 3px 15px;
+      color: $color--seconde;
+    }
+    h2{
+      font-size: 45px;
+      color: $color--primary__dark;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+    p{
+      font-weight: 500;
+    }
+  }
+  .about-cards{
+    padding: 0 30px;
+    font-family: $font--primary;
+    &__item{
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid;
+      border-radius: 8px;
+      box-shadow: 0 5px 30px 0 rgba(31,34,120,.08);
+      display: flex;
+      overflow: hidden;
+      padding: 10px 20px 10px 15px;
+      z-index: 1;
+      position: relative;
+      margin-bottom: 30px;
+      ::after{
+        border-radius: 50%;
+        content: "";
+        height: 85px;
+        left: -12px;
+        position: absolute;
+        top: -8px;
+        width: 85px;
+        z-index: -1;
+      }
+      .icon{
+        margin-right: 25px;
+        svg{
+          width: 45px;
+          height: 45px;
+        }
+      }
+      p{
+        font-weight: 600;
+        color: $color--primary__dark;
+        margin: 0 !important;
+      }
+      &.card1{
+        border-color: #b2f0fb;
+        ::after{
+          background-color: #ecfcff;
+        }
+      }
+      &.card2{
+        border-color: #a4fcc4;
+        ::after{
+          background-color: #eefff4;
+        }
+      }
+      &.card3{
+        border-color: #ffbdbc;
+        ::after{
+          background-color: #ecfcff;
+        }
+      }
+      &.card4{
+        border-color: #e2c4ff;
+        ::after{
+          background-color: #f8f0ff;
+        }
+      }
+    }
+
+    button{
+      margin-top: 40px;
+    }
+  }
+  &>img{
+    @include breakpoint(med, max){
+      display: none;
+    }
+    position: absolute;
+    z-index: -1;
+    &.banner2_1{
+      left: 5%;
+      top: 25%;
+    }
+    &.banner2_2{
+      right: 7%;
+      top: 30%;
+    }
+    &.banner5{
+      bottom: 20%;
+      left: 16%;
+    }
+  }
+}

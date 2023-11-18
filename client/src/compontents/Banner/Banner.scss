@@ -1,0 +1,157 @@
+@import '../../assets/Styles/';
+
+.bannerContent{
+  height: 100vh;
+  background-color: red;
+  background-image: url('../../assets/images/banner-background.jpg');
+  position: relative;
+  z-index: 1;
+  @include flex-center;
+  @include breakpoint(large, max){
+    height: 80vh;
+  }
+  @include breakpoint(custom, max, 920){
+    height: 60vh;
+  }
+  @include breakpoint(small, max){
+    height: 100vh;
+    text-align: center;
+  }
+  &::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/images/shap.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include positionAbs(_,_,0,0);
+    z-index: -1;
+  }
+  &__title{
+    background-position: 50%;
+    background-repeat: repeat;
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    padding: 5px 15px;
+    color: $color--primary;
+    font-family: $font--primary;
+    background-image: url('../../assets/images/bannerTitle-background.png');
+    margin-bottom: 20px;
+    @include breakpoint(large, max){
+      font-size: 16px;
+    }
+    @include breakpoint(custom, max, 920){
+      font-size: 12px;
+    }
+    @include breakpoint(med, max){
+      font-size: 12px;
+    }
+    @include breakpoint(small, max){
+      font-size: 16px;
+    }
+  }
+  &__paragraph{
+    color: #1f2278;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 50px;
+    font-family: $font--primary;
+    margin-bottom: 50px;
+    @include breakpoint(large, max){
+      font-size: 30px;
+    }
+    @include breakpoint(custom, max, 920){
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint(med, max){
+      font-size: 25px;
+      margin-bottom: 25px;  
+    }
+    @include breakpoint(small, max){
+      padding: 0 36px;
+      font-size: 30px;
+    }
+  }
+  button{
+    padding: 20px 45px;
+    font-size: 16px;
+    font-family: $font--primary;
+    background-color: $color--seconde;
+    @include breakpoint(large, max){
+      font-size: 12px;
+      padding: 15px 35px;
+    }
+    @include breakpoint(custom, max, 920){
+      font-size: 10px;
+      padding: 12px 30px;
+    }
+    @include breakpoint(small, max){
+      font-size: 13px;
+      padding: 16px 35px;
+      margin-bottom: 45px;
+    }
+  }
+  .doctor-img{
+    animation: up-down 2.5s infinite alternate;
+    width: 120%;
+    @include breakpoint(large, max){
+      width: 440px;
+    }
+    @include breakpoint(custom, max, 920){
+      width: 350px;
+    }
+    @include breakpoint(med, max){
+      width: 260px;  
+    }
+    @include breakpoint(custom, max, 642){
+      width: 240px; 
+    }
+    @include breakpoint(small, max){
+      width: 400px;  
+    }
+  }
+  &>img{
+    position: absolute;
+    @include breakpoint(med, max){
+      display: none;
+    }
+    &:first-of-type{
+      bottom: 35%;
+      left: 5%;
+    }
+    &:nth-of-type(2){
+      left: 51%;
+      top: 24%;
+    }
+    &:nth-of-type(3){
+      left: 17%;
+      top: 23%;
+    }
+    &:nth-of-type(4){
+      bottom: 15%;
+      left: 41%;
+      z-index: 1;
+    }
+    &:last-of-type{
+      bottom: 150px;
+      right: 150px;
+    }
+  }
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+
+  100% {
+      -webkit-transform: translatey(-10px);
+      transform: translatey(-10px);
+  }
+}

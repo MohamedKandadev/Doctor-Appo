@@ -1,0 +1,29 @@
+@import '../../assets/Styles/';
+
+.bestDoctorsContent{
+  padding: 100px 0;
+  font-family: $font--primary;
+  text-align: center;
+  .title{
+    color: $color--seconde;
+    background-position: 50%;
+    background-repeat: repeat;
+    display: inline-block;
+    font-weight: 700;
+    padding: 3px 15px;
+    text-align: center;
+    background-image: url('../../assets/images/bannerTitle-background.png');
+    @include breakpoint(med, max){
+      font-size: 20px;
+    }
+  }
+  .heading{
+    font-size: 45px;
+    color: $color--primary__dark;
+    margin: 10px 0 50px 0;
+    font-weight: 700;
+    @include breakpoint(med, max){
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import '../../assets/Styles/';
+
+.workingProcessContent{
+  padding: 100px 0;
+  font-family: $font--primary;
+  text-align: center;
+  background-image: url('../../assets/images/working_back.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  position: relative;
+  &__title{
+    color: $color--seconde;
+    background-position: 50%;
+    background-repeat: repeat;
+    display: inline-block;
+    font-weight: 700;
+    padding: 3px 15px;
+    text-align: center;
+    background-image: url('../../assets/images/bannerTitle-background.png');
+    @include breakpoint(med, max){
+      font-size: 16px;
+    }
+  }
+  &__heading{
+    font-size: 45px;
+    color: $color--primary__dark;
+    margin: 10px 0 50px 0;
+    font-weight: 700;
+    @include breakpoint(med, max){
+      font-size: 30px;
+    }
+  }
+  .processItems{
+    text-align: left;
+    &__item{
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: $shadow--primary;
+      overflow: hidden;
+      padding: 40px 30px;
+      position: relative;
+      transition: all .5s;
+      z-index: 1;
+      .number{
+        -webkit-text-stroke: 2px #f17732;
+        color: transparent;
+        font-size: 80px;
+        font-weight: 900;
+        line-height: 80px;
+        margin-bottom: 30px;
+        text-shadow: 0 10px 0 #ffe3d3;
+        transition: all .5s;
+      }
+      h5{
+        font-weight: 700;
+        color: $color--seconde;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+      button{
+        background-color: #e1e2f6;
+        color: $color--primary;
+        font-weight: 600;
+      }
+      &.seconde_card{
+        background-color: $color--seconde !important;
+        .number{
+          -webkit-text-stroke: 2px #fff;
+          text-shadow: 0 10px 0 #f38f5e;
+        }
+        h5,p{
+          color: white;
+        }
+      }
+    }
+  }
+  &>img{
+    position: absolute;
+    z-index: -1;
+    &:first-of-type{
+      bottom: 15%;
+      left: 5%;
+    }
+    &:nth-of-type(2){
+      right: 5%;
+      top: 50%;
+    }
+    &:last-of-type{
+      bottom: 10%;
+    right: 20%;
+    }
+    @include breakpoint(med, max){
+      display: none;
+    }
+  }
+}

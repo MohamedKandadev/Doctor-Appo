@@ -1,0 +1,17 @@
+@import '../../../assets/Styles/';
+
+.main-icon{
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  background-color: rgba($color:  $color--primary__dark, $alpha: .1);
+  color: $color--primary;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 42px;
+  text-align: center;
+
+  &.light{
+    background-color: #fff !important;
+  }
+}

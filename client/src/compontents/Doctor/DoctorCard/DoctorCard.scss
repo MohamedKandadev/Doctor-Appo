@@ -1,0 +1,105 @@
+@import '../../../assets/Styles/';
+
+.doctor-card{
+  background-color: #fff;
+  border: 2px solid rgba(86,90,207,.2);
+  border-radius: 20px;
+  padding: 35px 40px 50px;
+  position: relative;
+  text-align: center;
+  transition: all .5s;
+  z-index: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font--primary;
+  .doctor-img{
+    display: inline-block;
+    position: relative;
+    padding: 47px;
+    width: 100%;
+    margin-bottom: 40px;
+    img{
+      width: 171px;
+      height: 171px;
+      -webkit-mask-image: url('../../../assets/images/doctor/background.png');
+      mask-image: url('../../../assets/images/doctor/background.png');
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-size: 100%;
+      mask-size: 100%;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+    &::before, &::after{
+      background-position: 50%;
+      background-repeat: no-repeat;
+      content: "";
+      height: 100%;
+      left: 50%;
+      opacity: .2;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      transition: all .5s;
+      width: 100%;
+      z-index: -1;
+    }
+    &::before{
+      background-image: url('../../../assets/images/doctor/befor.png');
+    }
+    &::after{
+      background-image: url('../../../assets/images/doctor/after.png');
+    }
+  }
+  .doctor-name{
+    display: block;
+    color: $color--primary__dark;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .doctor-specialitie{
+    color: $color--seconde;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  &:hover{
+    border-color: #fff;
+    box-shadow: 0 10px 50px 0 rgba(0,2,72,.1);
+    z-index: 9;
+    .doctor-img{
+      &::after, &::before{
+        opacity: 1 !important;
+      }
+    }
+  }
+  .cursor-not{
+    cursor: not-allowed;
+    color: #565acf5e;
+    background-color: #f0f0f0;
+  }
+  .doctor-card-footer{
+    @include flex-column;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    .doctor-links{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 50px 0 0 0;
+      // @include positionAbs(_,_, 0, 0);
+      li{
+        &:not(:last-of-type){
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

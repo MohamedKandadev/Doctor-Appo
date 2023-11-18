@@ -1,0 +1,124 @@
+@import '../../assets/Styles';
+
+.navbarContent{
+  width: 100%;
+  padding: 0 100px;
+  position: fixed;
+  top: 0;
+  transition: .3s;
+  z-index: 40;
+  @include breakpoint(x-large, max){
+    padding: 0 20px;
+  }
+  &_menu{
+    @include cutsom-flex(space-between);
+    padding: 20px 0;
+    &__logo{
+      width: fit-content;
+    }
+    &__items{
+      &.tablet{
+        @include breakpoint(large, max){
+          display: none
+        }
+        ul{
+          @include cutsom-flex(end);
+          padding: 13px !important;
+          @include breakpoint(x-large, min){
+            margin-left: 90px;
+          }
+          li{
+            &:not(:last-of-type){
+              margin-right: 10px;
+            }
+            a{
+              padding: 45px 20px;
+            }
+          }
+        }
+
+      }
+      &.mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        padding-top: 100px;
+        transition: .5s;
+        transform: translateX(-100%);
+        z-index: 50;
+        @include breakpoint(large, min){
+          display: none;
+        }
+        ul{
+          @include flex-center-column;
+          li{
+            margin-bottom: 50px;
+            &:first-of-type{
+              margin-bottom: 80px;
+            }
+          }
+        }
+        &.active-nav{
+          transform: translateX(0) !important;
+        }
+      }
+      ul{
+        list-style: none;
+        li{
+          a{
+            text-decoration: none;
+            font-family: $font--primary;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color--primary__dark;
+          }
+        }
+      }
+      
+    }
+    &__contact{
+      @include breakpoint(large, max){
+        display: none
+      }
+      float: right;
+      ul{
+        list-style: none;
+        @include cutsom-flex(_, center);
+        font-family: $font--primary; 
+        li{
+          &.phone{
+            font-size: 20px;
+            font-weight: 700;
+            color: $color--primary__dark;
+            @include breakpoint(custom, max, 1381){
+              display: none;
+            }
+          } 
+          &:last-of-type{
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+    .button-nav{
+      padding: 0;
+      border: none;
+      background: none;
+      &.open-navbar{
+        @include breakpoint(large, min){
+          display: none
+        }
+      }
+      &.close-navbar{
+        @include positionAbs(23px, 47px)
+      }
+    }
+  }
+  &.scroll-active{
+    background-color: #fff !important;
+    box-shadow: $shadow--primary;
+  }
+}
