@@ -10,3 +10,8 @@ const Loading = () => {
 }
 
 export default Loading
+
+export const ButtonLoader = _ =>(
+<div className="loader">
+</div>
+)

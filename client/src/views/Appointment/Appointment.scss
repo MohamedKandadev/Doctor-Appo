@@ -1,0 +1,36 @@
+@import '../../assets/Styles/';
+
+.appointmentContent{
+  .card-date{
+    font-family: $font--primary;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 10px 60px 0 rgba(31,34,120,.1);
+    padding: 40px 35px;
+    position: relative;
+    text-align: center;
+    h2{
+      font-weight: 700;
+      color: $color--primary__dark;
+      margin-bottom: 70px;
+    }
+    a,button{
+      display: inline-block;
+      width: 50%;
+      font-size: 16px;
+      background-color: $color--seconde;
+      padding: 21px 27px;
+    }
+    &::after{
+      border: 2px solid #565acf;
+      border-radius: 40px;
+      content: "";
+      height: 100%;
+      left: -20px;
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

@@ -1,10 +1,6 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import apiSlice from '../api';
 
 export const doctorApi = apiSlice.injectEndpoints({
-  // reducerPath: 'doctorApi',
-  // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8080/api/doctors' }),
-  // baseQuery: fetchBaseQuery({ baseUrl: 'https://doctorbooking.cyclic.app/api/doctors' }),
   endpoints: (builder) => ({
     getBestDoctors: builder.query({
       query: _ => `doctors/best`,
@@ -16,8 +12,6 @@ export const doctorApi = apiSlice.injectEndpoints({
   })
 })
 
-// Export hooks for usage in functional components, which are
-// auto-generated based on the defined endpoints
 export const { 
   useGetBestDoctorsQuery,
   useGetDoctorsBySpecialtieQuery

@@ -34,7 +34,7 @@ const NavBar = () => {
             <ul>
               <li><Link to='/'>Home</Link></li>
               <li><Link to='/doctors'>Doctors</Link></li>
-              <li><Link to='/'>Auth</Link></li>
+              <li><Link to='/auth'>Auth</Link></li>
             </ul>
           </div>
           <div className={`navbarContent_menu__items mobile ${toggelNavMobile? 'active-nav': null}`}>

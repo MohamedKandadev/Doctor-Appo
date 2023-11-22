@@ -11,7 +11,7 @@ const Button = ({
 }) => {
   
   if(to){
-    <Link 
+    return <Link 
       to={to}
       className='main-button'
     >

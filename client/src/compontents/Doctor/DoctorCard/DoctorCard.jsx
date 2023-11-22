@@ -17,7 +17,7 @@ const DoctorCard = ({ doctor }) => {
   return (
     <Col lg='4' md='6' sm='10' className='px-4 mt-5'>
       <div className='doctor-card'>
-        <Link to={`doctor/${doctor.user._id}`} className="doctor-img">
+        <Link to={`/appointment/${doctor.user._id}`} className="doctor-img">
           <img src={photo || DOCTOR} alt="Doctor Photo" onError={checkLoad}/>
         </Link>
         <span className="doctor-name">
@@ -81,7 +81,7 @@ const DoctorCard = ({ doctor }) => {
               }
             </li>
           </ul>
-          <BUTTON>Book Appointment</BUTTON>
+          <BUTTON to={`/appointment/${doctor.user._id}`}>Book Appointment</BUTTON>
         </div>
       </div>
     </Col>

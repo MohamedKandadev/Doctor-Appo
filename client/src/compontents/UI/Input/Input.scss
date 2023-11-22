@@ -1,0 +1,19 @@
+@import '../../../assets/Styles/';
+
+.main-input{
+  min-height: 60px;
+  margin-bottom: 20px;
+  text-align: start;
+  font-family: $font--primary;
+  select,input{
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px solid rgba(86,90,207,.3);
+    border-radius: 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    height: 60px;
+    outline: none;
+  }
+}

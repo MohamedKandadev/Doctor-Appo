@@ -33,6 +33,9 @@
     margin-bottom: 40px;
     text-transform: capitalize;
     z-index: 2 !important;
+    @include breakpoint(small, max){
+      font-size: 50px;
+    }
   }
   button{
     cursor: initial !important;
